@@ -16,6 +16,34 @@ dns:
     - tls://dns.google:853
 proxies:
 - type: vless
+  name: cdn.anycast.eu.org
+  server: cdn.anycast.eu.org
+  port: 8443
+  uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
+  network: ws
+  tls: true
+  udp: true
+  sni: v2.zkliang.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: "/?ed=2048"
+    headers:
+      host: v2.zkliang.com
+- type: vless
+  name: whatismyipaddress.com
+  server: whatismyipaddress.com
+  port: 8443
+  uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
+  network: ws
+  tls: true
+  udp: true
+  sni: v2.zkliang.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: "/?ed=2048"
+    headers:
+      host: v2.zkliang.com
+- type: vless
   name: www.udacity.com
   server: www.udacity.com
   port: 8443
@@ -75,12 +103,12 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-#      - 🇭🇰 香港节点
-#      - 🇨🇳 台湾节点
-#      - 🇸🇬 狮城节点
-#      - 🇯🇵 日本节点
-#      - 🇺🇲 美国节点
-#      - 🇰🇷 韩国节点
+      - 🇭🇰 香港节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇰🇷 韩国节点
       - 负载均衡
       - 自动选择
       - 🚀 手动切换
@@ -90,6 +118,8 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - cdn.anycast.eu.org
+      - whatismyipaddress.com
       - www.udacity.com
       - www.visa.co.jp
       - www.csgo.com
@@ -100,6 +130,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - cdn.anycast.eu.org
+      - whatismyipaddress.com
       - www.udacity.com
       - www.visa.co.jp
       - www.csgo.com
@@ -107,6 +139,8 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     proxies:
+      - cdn.anycast.eu.org
+      - whatismyipaddress.com
       - www.udacity.com
       - www.visa.co.jp
       - www.csgo.com
