@@ -16,8 +16,8 @@ dns:
     - tls://dns.google:853
 proxies:
 - type: vless
-  name: cdn.anycast.eu.org
-  server: cdn.anycast.eu.org
+  name: www.shopify.com
+  server: www.shopify.com
   port: 8443
   uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
   network: ws
@@ -118,7 +118,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - cdn.anycast.eu.org
+      - www.shopify.com
       - whatismyipaddress.com
       - www.udacity.com
       - www.visa.co.jp
@@ -130,7 +130,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - cdn.anycast.eu.org
+      - www.shopify.com
       - whatismyipaddress.com
       - www.udacity.com
       - www.visa.co.jp
@@ -139,7 +139,7 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     proxies:
-      - cdn.anycast.eu.org
+      - www.shopify.com
       - whatismyipaddress.com
       - www.udacity.com
       - www.visa.co.jp
