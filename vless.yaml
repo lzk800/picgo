@@ -16,8 +16,92 @@ dns:
     - tls://dns.google:853
 proxies:
 - type: vless
-  name: www.shopify.com
-  server: www.shopify.com
+  name: www.zsu.gov.ua
+  server: www.zsu.gov.ua
+  port: 8443
+  uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
+  network: ws
+  tls: true
+  udp: true
+  sni: v2.zkliang.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: "/?ed=2048"
+    headers:
+      host: v2.zkliang.com
+- type: vless
+  name: gur.gov.ua
+  server: gur.gov.ua
+  port: 8443
+  uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
+  network: ws
+  tls: true
+  udp: true
+  sni: v2.zkliang.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: "/?ed=2048"
+    headers:
+      host: v2.zkliang.com
+- type: vless
+  name: download.yunzhongzhuan.com
+  server: download.yunzhongzhuan.com
+  port: 8443
+  uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
+  network: ws
+  tls: true
+  udp: true
+  sni: v2.zkliang.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: "/?ed=2048"
+    headers:
+      host: v2.zkliang.com
+- type: vless
+  name: www.glassdoor.com
+  server: www.glassdoor.com
+  port: 8443
+  uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
+  network: ws
+  tls: true
+  udp: true
+  sni: v2.zkliang.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: "/?ed=2048"
+    headers:
+      host: v2.zkliang.com
+- type: vless
+  name: www.pcmag.com
+  server: www.pcmag.com
+  port: 8443
+  uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
+  network: ws
+  tls: true
+  udp: true
+  sni: v2.zkliang.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: "/?ed=2048"
+    headers:
+      host: v2.zkliang.com
+- type: vless
+  name: www.wto.org
+  server: www.wto.org
+  port: 8443
+  uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
+  network: ws
+  tls: true
+  udp: true
+  sni: v2.zkliang.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: "/?ed=2048"
+    headers:
+      host: v2.zkliang.com
+- type: vless
+  name: fbi.gov
+  server: fbi.gov
   port: 8443
   uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
   network: ws
@@ -44,8 +128,8 @@ proxies:
     headers:
       host: v2.zkliang.com
 - type: vless
-  name: www.udacity.com
-  server: www.udacity.com
+  name: skk.moe
+  server: skk.moe
   port: 8443
   uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
   network: ws
@@ -57,37 +141,9 @@ proxies:
     path: "/?ed=2048"
     headers:
       host: v2.zkliang.com
-- type: vless
-  name: www.visa.co.jp
-  server: www.visa.co.jp
-  port: 8443
-  uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
-  network: ws
-  tls: true
-  udp: true
-  sni: v2.zkliang.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: "/?ed=2048"
-    headers:
-      host: v2.zkliang.com
-- type: vless
-  name: www.csgo.com
-  server: www.csgo.com
-  port: 8443
-  uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
-  network: ws
-  tls: true
-  udp: true
-  sni: v2.zkliang.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: "/?ed=2048"
-    headers:
-      host: v2.zkliang.com
-- type: vless
-  name: www.digitalocean.com
-  server: www.digitalocean.com
+  - type: vless
+  name: www.visa.com.sg
+  server: www.visa.com.sg
   port: 8443
   uuid: c590b7ff-4a09-497d-af6c-28529eb195ec
   network: ws
@@ -118,33 +174,45 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - www.shopify.com
+      - www.zsu.gov.ua
+      - gur.gov.ua
+      - download.yunzhongzhuan.com
+      - www.glassdoor.com
+      - www.pcmag.com
+      - www.wto.org
+      - fbi.gov
       - whatismyipaddress.com
-      - www.udacity.com
-      - www.visa.co.jp
-      - www.csgo.com
-      - www.digitalocean.com
+      - skk.moe
+      - www.visa.com.sg
   - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - www.shopify.com
+      - www.zsu.gov.ua
+      - gur.gov.ua
+      - download.yunzhongzhuan.com
+      - www.glassdoor.com
+      - www.pcmag.com
+      - www.wto.org
+      - fbi.gov
       - whatismyipaddress.com
-      - www.udacity.com
-      - www.visa.co.jp
-      - www.csgo.com
-      - www.digitalocean.com
+      - skk.moe
+      - www.visa.com.sg
   - name: 🚀 手动切换
     type: select
     proxies:
-      - www.shopify.com
+      - www.zsu.gov.ua
+      - gur.gov.ua
+      - download.yunzhongzhuan.com
+      - www.glassdoor.com
+      - www.pcmag.com
+      - www.wto.org
+      - fbi.gov
       - whatismyipaddress.com
-      - www.udacity.com
-      - www.visa.co.jp
-      - www.csgo.com
-      - www.digitalocean.com
+      - skk.moe
+      - www.visa.com.sg
   - name: 📲 电报消息
     type: select
     proxies:
