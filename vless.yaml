@@ -141,7 +141,7 @@ proxies:
     path: "/?ed=2048"
     headers:
       host: v2.zkliang.com
-  - type: vless
+- type: vless
   name: www.visa.com.sg
   server: www.visa.com.sg
   port: 8443
